@@ -13,10 +13,14 @@ Sin city
 #93291E
 */
 
+// ------- colors -------- //
+
 $color-primary-red: #ed213a;
 $color-primary-dark: #0b0b0c;
 $color-primary-grey: #696969;
 $color-primary-white: #f0f8ff;
+$color-secondary-greyRed: #533030ab;
+$color-gradient-darkRed: #351a17da, #680c160e;
 
 ::-webkit-scrollbar {
   display: none;
@@ -41,8 +45,8 @@ body {
   font-weight: 400;
   /* font-size: 18px; */
   line-height: 1.7;
-  color: #696969;
-  background-color: #0b0b0c;
+  color: $color-primary-grey;
+  background-color: $color-primary-dark;
   /* border-box :  change the box model so the margins and paddings are no longer added to the total width/height that we specify for the box*/
   box-sizing: border-box;
 }
@@ -52,7 +56,7 @@ body {
 .header {
   height: 100vh;
   height: 100svh; /* 95% viewport height */
-  background-image: linear-gradient(to right bottom, #351a17da, #680c160e),
+  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
     url(../img/burgerMeal2small2.jpg);
   background-size: cover; /*whatever the width of the viewport, it will try to fit the element of the box*/
   background-position: center; /* making the top area of the burger background stayput while being minimized*/
@@ -92,7 +96,7 @@ body {
 }
 
 .heading-primary {
-  color: #f0f8ff;
+  color: $color-primary-white;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -139,25 +143,25 @@ body {
 }
 
 .header--bg-header:nth-child(1) {
-  background-image: linear-gradient(to right bottom, #351a17da, #680c160e),
+  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
     url(../img/threePatty.jpg);
 }
 .header--bg-header:nth-child(2) {
   animation-delay: 8s;
-  background-image: linear-gradient(to right bottom, #351a17da, #680c160e),
+  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
     url(../img/chickenBurger.jpg);
 }
 .header--bg-header:nth-child(3) {
   animation-delay: 16s;
-  background-image: linear-gradient(to right bottom, #351a17da, #680c160e),
+  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
     url(../img/burgerComboWithDrink.jpg);
 }
 
 .btn--white {
   /* background-color: #ed213a; */
-  color: #f0f8ff;
+  color: $color-primary-white $c;
   border-style: solid;
-  border-color: #ed213a;
+  border-color: $color-primary-red;
   border-width: 0.4rem;
   border-radius: 4rem;
   font-weight: 700;
@@ -177,15 +181,15 @@ body {
 
 .btn:hover {
   transform: translateY(-0.6rem);
-  background-color: #ed213a;
+  background-color: $color-primary-red;
   color: #0b0b0c;
-  box-shadow: 0 1rem 2rem rgba(83, 48, 48, 0.671);
+  box-shadow: 0 1rem 2rem $color-secondary-greyRed;
   /* 0 = X axis, 10px = Y axis, 20px = shadow blur*/
 }
 
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(83, 48, 48, 0.671);
+  box-shadow: 0 0.5rem 1rem $color-secondary-greyRed;
 }
 
 .btn--animated {
