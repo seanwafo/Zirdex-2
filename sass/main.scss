@@ -71,6 +71,45 @@ body {
   width: 100vw;
   overflow: hidden;
   transition: clip-path 0.5s ease-in-out;
+
+  /* Too Tasty to be Legal */
+  &__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%; /* these "top" and "left" positions are in relation to the parent element*/
+    transform: translate(
+      -50%,
+      -50%
+    ); /* this is in relation to the element itself. */
+    text-align: center; /* making text elements to the center*/
+  }
+
+  &--bg-header {
+    animation: headerAnim 28s linear infinite;
+    background-size: cover;
+    background-position: 50%;
+    height: 100vh;
+    inset: 0;
+    opacity: 0;
+    position: absolute;
+    scale: 1.2;
+    z-index: -1;
+  }
+
+  &--bg-header:nth-child(1) {
+    background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
+      url(../img/threePatty.jpg);
+  }
+  &--bg-header:nth-child(2) {
+    animation-delay: 8s;
+    background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
+      url(../img/chickenBurger.jpg);
+  }
+  &--bg-header:nth-child(3) {
+    animation-delay: 16s;
+    background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
+      url(../img/burgerComboWithDrink.jpg);
+  }
 }
 
 .logo-box {
@@ -83,18 +122,6 @@ body {
     height: 45px;
    */
 
-/* Too Tasty to be Legal */
-.header__text-box {
-  position: absolute;
-  top: 45%;
-  left: 50%; /* these "top" and "left" positions are in relation to the parent element*/
-  transform: translate(
-    -50%,
-    -50%
-  ); /* this is in relation to the element itself. */
-  text-align: center; /* making text elements to the center*/
-}
-
 .heading-primary {
   color: $color-primary-white;
   text-transform: uppercase;
@@ -102,105 +129,80 @@ body {
   font-family: 'Inter', sans-serif;
   backface-visibility: hidden; /* property sets whether the back face of an element is visible when turned towards the user*/
   margin-bottom: 10vh; /* separation from heading to the order now button */
+
+  &--main {
+    display: block; /* making the 2 texts slogan on top of each other. block creates line break and take the entire width*/
+    font-weight: 800;
+    font-size: 13rem;
+    letter-spacing: 1rem;
+
+    animation-name: moveInFromTop; /* see animation section */
+    animation-duration: 1.2s;
+  }
+
+  &--sub {
+    display: block; /* check above definition from 'primary-main' */
+    font-weight: 400;
+    font-size: 8rem;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInFromBottom;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(
+      0.95,
+      0.05,
+      0.795,
+      0.6
+    ); /* slow show animation*/
+  }
 }
 
-.heading-primary--main {
-  display: block; /* making the 2 texts slogan on top of each other. block creates line break and take the entire width*/
-  font-weight: 800;
-  font-size: 13rem;
-  letter-spacing: 1rem;
+.btn {
+  &--white {
+    /* background-color: #ed213a; */
+    color: $color-primary-white;
+    border-style: solid;
+    border-color: $color-primary-red;
+    border-width: 0.4rem;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
 
-  animation-name: moveInFromTop; /* see animation section */
-  animation-duration: 1.2s;
-}
+  $:link,
+  $:visited {
+    text-transform: uppercase;
+    text-decoration-line: none;
+    padding: 1.5rem 4.2rem; /* button size padding*/
+    display: inline-block; /* so that it'll have its own space*/
+    transition: all 0.2s;
+  }
 
-.heading-primary--sub {
-  display: block; /* check above definition from 'primary-main' */
-  font-weight: 400;
-  font-size: 8rem;
-  letter-spacing: 3.5rem;
+  &:hover {
+    transform: translateY(-0.6rem);
+    background-color: $color-primary-red;
+    color: $color-primary-dark;
+    box-shadow: 0 1rem 2rem $color-secondary-greyRed;
+    /* 0 = X axis, 10px = Y axis, 20px = shadow blur*/
+  }
 
-  animation-name: moveInFromBottom;
-  animation-duration: 1.2s;
-  animation-timing-function: cubic-bezier(
-    0.95,
-    0.05,
-    0.795,
-    0.6
-  ); /* slow show animation*/
-}
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem $color-secondary-greyRed;
+  }
 
-.header--bg-header {
-  animation: headerAnim 28s linear infinite;
-  background-size: cover;
-  background-position: 50%;
-  height: 100vh;
-  inset: 0;
-  opacity: 0;
-  position: absolute;
-  scale: 1.2;
-  z-index: -1;
-}
-
-.header--bg-header:nth-child(1) {
-  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-    url(../img/threePatty.jpg);
-}
-.header--bg-header:nth-child(2) {
-  animation-delay: 8s;
-  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-    url(../img/chickenBurger.jpg);
-}
-.header--bg-header:nth-child(3) {
-  animation-delay: 16s;
-  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-    url(../img/burgerComboWithDrink.jpg);
-}
-
-.btn--white {
-  /* background-color: #ed213a; */
-  color: $color-primary-white $c;
-  border-style: solid;
-  border-color: $color-primary-red;
-  border-width: 0.4rem;
-  border-radius: 4rem;
-  font-weight: 700;
-  font-size: 2rem;
-  letter-spacing: 0.5rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration-line: none;
-  padding: 1.5rem 4.2rem; /* button size padding*/
-  display: inline-block; /* so that it'll have its own space*/
-  transition: all 0.2s;
-}
-
-.btn:hover {
-  transform: translateY(-0.6rem);
-  background-color: $color-primary-red;
-  color: #0b0b0c;
-  box-shadow: 0 1rem 2rem $color-secondary-greyRed;
-  /* 0 = X axis, 10px = Y axis, 20px = shadow blur*/
-}
-
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem $color-secondary-greyRed;
-}
-
-.btn--animated {
-  animation: moveInFromBottom 0.5s ease-out 1.5s;
-  animation-fill-mode: backwards;
+  &--animated {
+    animation: moveInFromBottom 0.5s ease-out 1.5s;
+    animation-fill-mode: backwards;
+  }
 }
 
 section {
   position: relative;
   display: flex;
-  color: aliceblue;
+  color: $color-primary-white;
   flex-direction: column;
   align-items: center;
   min-height: 40rem;
