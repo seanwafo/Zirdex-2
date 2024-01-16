@@ -1,0 +1,28 @@
+::-webkit-scrollbar {
+  display: none;
+}
+/* Universal Selector '*' */
+*,
+*::after,
+*::before {
+  /* make everything zero margin & padding for CLEAN start*/
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* this will force inherit the box sizing we set in the body*/
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Body element selector: power inheretance */
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  /* font-size: 18px; */
+  line-height: 1.7;
+  color: $color-primary-grey;
+  background-color: $color-primary-dark;
+  /* border-box :  change the box model so the margins and paddings are no longer added to the total width/height that we specify for the box*/
+  box-sizing: border-box;
+}

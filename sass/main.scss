@@ -1,3 +1,16 @@
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/animation';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/button';
+
+@import 'pages/home';
+
 /* colors
 ----Gradient----
 pure lust: 
@@ -12,44 +25,6 @@ Sin city
 #ED213A
 #93291E
 */
-
-// ------- colors -------- //
-
-$color-primary-red: #ed213a;
-$color-primary-dark: #0b0b0c;
-$color-primary-grey: #696969;
-$color-primary-white: #f0f8ff;
-$color-secondary-greyRed: #533030ab;
-$color-gradient-darkRed: #351a17da, #680c160e;
-
-::-webkit-scrollbar {
-  display: none;
-}
-/* Universal Selector '*' */
-*,
-*::after,
-*::before {
-  /* make everything zero margin & padding for CLEAN start*/
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; /* this will force inherit the box sizing we set in the body*/
-}
-
-html {
-  font-size: 62.5%;
-}
-
-/* Body element selector: power inheretance */
-body {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
-  /* font-size: 18px; */
-  line-height: 1.7;
-  color: $color-primary-grey;
-  background-color: $color-primary-dark;
-  /* border-box :  change the box model so the margins and paddings are no longer added to the total width/height that we specify for the box*/
-  box-sizing: border-box;
-}
 
 /* header */
 
@@ -157,48 +132,6 @@ body {
   }
 }
 
-.btn {
-  &--white {
-    /* background-color: #ed213a; */
-    color: $color-primary-white;
-    border-style: solid;
-    border-color: $color-primary-red;
-    border-width: 0.4rem;
-    border-radius: 4rem;
-    font-weight: 700;
-    font-size: 2rem;
-    letter-spacing: 0.5rem;
-    transition: all 0.3s ease-in-out;
-  }
-
-  $:link,
-  $:visited {
-    text-transform: uppercase;
-    text-decoration-line: none;
-    padding: 1.5rem 4.2rem; /* button size padding*/
-    display: inline-block; /* so that it'll have its own space*/
-    transition: all 0.2s;
-  }
-
-  &:hover {
-    transform: translateY(-0.6rem);
-    background-color: $color-primary-red;
-    color: $color-primary-dark;
-    box-shadow: 0 1rem 2rem $color-secondary-greyRed;
-    /* 0 = X axis, 10px = Y axis, 20px = shadow blur*/
-  }
-
-  &:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem $color-secondary-greyRed;
-  }
-
-  &--animated {
-    animation: moveInFromBottom 0.5s ease-out 1.5s;
-    animation-fill-mode: backwards;
-  }
-}
-
 section {
   position: relative;
   display: flex;
@@ -208,49 +141,4 @@ section {
   min-height: 40rem;
   padding: 10rem 30vw; /*vw or viewwidth */
   font-size: 2rem;
-}
-
-/*----- Animation -----*/
-@keyframes moveInFromTop {
-  /* start of animation */
-  0% {
-    opacity: 0;
-    transform: translateY(-10rem); /* -100px from top to its current location*/
-  }
-
-  /* finish animation */
-  100% {
-    opacity: 1;
-    transform: translate(0); /* original state */
-  }
-}
-
-@keyframes moveInFromBottom {
-  /* start of animation */
-  0% {
-    opacity: 0;
-    transform: translateY(10rem); /* -100px from top to its current location*/
-  }
-
-  /* finish animation */
-  100% {
-    opacity: 1;
-    transform: translate(0); /* original state */
-  }
-}
-
-/* used for in the header picture show */
-@keyframes headerAnim {
-  25% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.8;
-    scale: 1;
-  }
-
-  60% {
-    opacity: 0;
-  }
 }

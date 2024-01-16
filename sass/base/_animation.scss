@@ -1,0 +1,44 @@
+/*----- Animation -----*/
+@keyframes moveInFromTop {
+  /* start of animation */
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); /* -100px from top to its current location*/
+  }
+
+  /* finish animation */
+  100% {
+    opacity: 1;
+    transform: translate(0); /* original state */
+  }
+}
+
+@keyframes moveInFromBottom {
+  /* start of animation */
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); /* -100px from top to its current location*/
+  }
+
+  /* finish animation */
+  100% {
+    opacity: 1;
+    transform: translate(0); /* original state */
+  }
+}
+
+/* used for in the header picture show */
+@keyframes headerAnim {
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+    scale: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+}
