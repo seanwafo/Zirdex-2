@@ -1,0 +1,43 @@
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  /* font-size: 18px; */
+  line-height: 1.7;
+  color: $color-primary-grey;
+  background-color: $color-primary-dark;
+}
+
+.heading-primary {
+  color: $color-primary-white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  backface-visibility: hidden; /* property sets whether the back face of an element is visible when turned towards the user*/
+  margin-bottom: 10vh; /* separation from heading to the order now button */
+
+  &--main {
+    display: block; /* making the 2 texts slogan on top of each other. block creates line break and take the entire width*/
+    font-weight: 800;
+    font-size: 13rem;
+    letter-spacing: 1rem;
+
+    animation-name: moveInFromTop; /* see animation section */
+    animation-duration: 1.2s;
+  }
+
+  &--sub {
+    display: block; /* check above definition from 'primary-main' */
+    font-weight: 400;
+    font-size: 8rem;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInFromBottom;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(
+      0.95,
+      0.05,
+      0.795,
+      0.6
+    ); /* slow show animation*/
+  }
+}

@@ -1,14 +1,21 @@
+// ----- abstracts ------ //
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
+// ----- base ------ //
 @import 'base/animation';
 @import 'base/base';
 @import 'base/typography';
 @import 'base/utilities';
 
+// ----- components ------ //
 @import 'components/button';
 
+// ----- layout ------ //
+@import 'layout/header';
+
+// ----- pages ------ //
 @import 'pages/home';
 
 /* colors
@@ -25,112 +32,6 @@ Sin city
 #ED213A
 #93291E
 */
-
-/* header */
-
-.header {
-  height: 100vh;
-  height: 100svh; /* 95% viewport height */
-  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-    url(../img/burgerMeal2small2.jpg);
-  background-size: cover; /*whatever the width of the viewport, it will try to fit the element of the box*/
-  background-position: center; /* making the top area of the burger background stayput while being minimized*/
-  position: relative;
-  clip-path: polygon(
-    25% 0%,
-    100% 0%,
-    75% 100%,
-    0% 100%
-  ); /*need to fix clipping the logo */
-  isolation: isolate;
-  width: 100vw;
-  overflow: hidden;
-  transition: clip-path 0.5s ease-in-out;
-
-  /* Too Tasty to be Legal */
-  &__text-box {
-    position: absolute;
-    top: 45%;
-    left: 50%; /* these "top" and "left" positions are in relation to the parent element*/
-    transform: translate(
-      -50%,
-      -50%
-    ); /* this is in relation to the element itself. */
-    text-align: center; /* making text elements to the center*/
-  }
-
-  &--bg-header {
-    animation: headerAnim 28s linear infinite;
-    background-size: cover;
-    background-position: 50%;
-    height: 100vh;
-    inset: 0;
-    opacity: 0;
-    position: absolute;
-    scale: 1.2;
-    z-index: -1;
-  }
-
-  &--bg-header:nth-child(1) {
-    background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-      url(../img/threePatty.jpg);
-  }
-  &--bg-header:nth-child(2) {
-    animation-delay: 8s;
-    background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-      url(../img/chickenBurger.jpg);
-  }
-  &--bg-header:nth-child(3) {
-    animation-delay: 16s;
-    background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-      url(../img/burgerComboWithDrink.jpg);
-  }
-}
-
-.logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-/* .logo {
-    height: 45px;
-   */
-
-.heading-primary {
-  color: $color-primary-white;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-  backface-visibility: hidden; /* property sets whether the back face of an element is visible when turned towards the user*/
-  margin-bottom: 10vh; /* separation from heading to the order now button */
-
-  &--main {
-    display: block; /* making the 2 texts slogan on top of each other. block creates line break and take the entire width*/
-    font-weight: 800;
-    font-size: 13rem;
-    letter-spacing: 1rem;
-
-    animation-name: moveInFromTop; /* see animation section */
-    animation-duration: 1.2s;
-  }
-
-  &--sub {
-    display: block; /* check above definition from 'primary-main' */
-    font-weight: 400;
-    font-size: 8rem;
-    letter-spacing: 3.5rem;
-
-    animation-name: moveInFromBottom;
-    animation-duration: 1.2s;
-    animation-timing-function: cubic-bezier(
-      0.95,
-      0.05,
-      0.795,
-      0.6
-    ); /* slow show animation*/
-  }
-}
 
 section {
   position: relative;
