@@ -13,6 +13,7 @@
 @import 'components/button';
 
 // ----- layout ------ //
+@import 'layout/grid';
 @import 'layout/header';
 
 // ----- pages ------ //
@@ -34,7 +35,7 @@ Sin city
 */
 
 //this is just a template for now
-section {
+.section-expirement {
   position: relative;
   display: flex;
   color: $color-primary-white;

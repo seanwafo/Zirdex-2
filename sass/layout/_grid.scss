@@ -1,0 +1,7 @@
+.row {
+  max-width: $grid-width; //we set 114rem(1140px is the usual monitor width) as the default and if it's less than 114rem, then browser will occupy 100% of the width
+  margin: 0 auto;
+  background-color: #11c9a1;
+  font-size: 2rem;
+  margin-bottom: 80px;
+}
