@@ -133,9 +133,11 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  background-color: #11c9a1;
+  background-color: #11c95e;
   font-size: 2rem;
-  margin-bottom: 80px;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
 }
 
 .logo-box {
@@ -155,14 +157,11 @@ body {
   background-size: cover; /*whatever the width of the viewport, it will try to fit the element of the box*/
   background-position: center; /* making the top area of the burger background stayput while being minimized*/
   position: relative;
-  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); /*need to fix clipping the logo */
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); /*need to fix clipping the logo */
   isolation: isolate;
   width: 100vw;
   overflow: hidden;
-  transition: -webkit-clip-path 0.5s ease-in-out;
   transition: clip-path 0.5s ease-in-out;
-  transition: clip-path 0.5s ease-in-out, -webkit-clip-path 0.5s ease-in-out;
   /* Too Tasty to be Legal */
 }
 .header__text-box {
