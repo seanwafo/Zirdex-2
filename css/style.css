@@ -130,9 +130,16 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  background-color: #c911a1;
-  font-size: 2rem;
-  margin-bottom: 8rem; }
+  background-color: #11c95e;
+  font-size: 2rem; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row .col-1-of-2 {
+    width: calc( (100% - 6rem) / 2);
+    background-color: aquamarine;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
 
 .logo-box {
   position: absolute;

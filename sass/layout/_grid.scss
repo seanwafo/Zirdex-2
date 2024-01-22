@@ -7,4 +7,16 @@
   &:not(:last-child) {
     margin-bottom: $gutter-vertical; // all element under .row class will have this setting EXCEPT for the last one.
   }
+
+  .col-1-of-2 {
+    width: calc(
+      (100% - #{$gutter-horizontal}) / 2
+    ); // using the calc() function to get the desired column structure. we need to wrap the sass variable with #{}
+    background-color: aquamarine;
+    float: left; // we always float these column to the left. they are now on the same row
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal; // since gutter will be from the left column. we will not include the right column margin
+    }
+  }
 }
