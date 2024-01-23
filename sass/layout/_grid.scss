@@ -8,6 +8,8 @@
     margin-bottom: $gutter-vertical; // all element under .row class will have this setting EXCEPT for the last one.
   }
 
+  @include clearfix;
+
   .col-1-of-2 {
     width: calc(
       (100% - #{$gutter-horizontal}) / 2
@@ -18,5 +20,9 @@
     &:not(:last-child) {
       margin-right: $gutter-horizontal; // since gutter will be from the left column. we will not include the right column margin
     }
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
   }
 }

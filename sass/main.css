@@ -139,6 +139,22 @@ body {
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+  background-color: aquamarine;
+  float: left;
+}
+.row .col-1-of-2:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
 
 .logo-box {
   position: absolute;
