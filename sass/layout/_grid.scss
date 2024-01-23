@@ -8,12 +8,12 @@
     margin-bottom: $gutter-vertical; // all element under .row class will have this setting EXCEPT for the last one.
   }
 
+  //mixin clearfix for float issue
   @include clearfix;
 
-  .col-1-of-2 {
-    width: calc(
-      (100% - #{$gutter-horizontal}) / 2
-    ); // using the calc() function to get the desired column structure. we need to wrap the sass variable with #{}
+  // attribute due to col- repeated below that needs to be DRY
+  // class^= is selecting the class that STARTS with "col-"
+  [class^='col-'] {
     background-color: aquamarine;
     float: left; // we always float these column to the left. they are now on the same row
 
@@ -22,7 +22,19 @@
     }
   }
 
+  .col-1-of-2 {
+    width: calc(
+      (100% - #{$gutter-horizontal}) / 2
+    ); // using the calc() function to get the desired column structure. we need to wrap the sass variable with #{}
+  }
+
   .col-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    ); // 2 multiply the col-1-of-3 to get the 2 columns combined into 1 big column.
   }
 }
