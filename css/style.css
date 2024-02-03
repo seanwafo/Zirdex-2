@@ -210,6 +210,10 @@ body {
     animation-delay: 16s;
     background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/burgerComboWithDrink.jpg); }
 
+.section-about {
+  background-color: #064e4e;
+  padding: 50rem 25rem; }
+
 /* colors
 ----Gradient----
 pure lust: 
