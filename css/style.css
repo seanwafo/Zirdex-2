@@ -212,7 +212,8 @@ body {
 
 .section-about {
   background-color: #064e4e;
-  padding: 50rem 25rem; }
+  padding: 50rem 25rem;
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%); }
 
 /* colors
 ----Gradient----
