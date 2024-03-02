@@ -211,9 +211,10 @@ body {
     background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/burgerComboWithDrink.jpg); }
 
 .section-about {
-  background-color: #064e4e;
+  background-color: #f0f8ff;
   padding: 50rem 25rem;
-  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%); }
+  border-right: 60vh solid #ed213a;
+  display: flex; }
 
 /* colors
 ----Gradient----

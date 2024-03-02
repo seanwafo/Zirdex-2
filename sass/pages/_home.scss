@@ -1,5 +1,6 @@
 .section-about {
-  background-color: rgb(6, 78, 78);
+  background-color: $color-primary-white;
   padding: 50rem 25rem;
-  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%); // prototype layout
+  border-right: 60vh solid $color-primary-red;
+  display: flex;
 }
