@@ -91,6 +91,31 @@ body {
     animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.6);
     /* slow show animation*/ }
 
+.heading-secondary {
+  color: #0b0b0c;
+  text-transform: uppercase;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  backface-visibility: hidden; }
+  .heading-secondary--main {
+    display: grid;
+    font-weight: 800;
+    font-size: 10rem;
+    letter-spacing: 1rem;
+    animation-name: moveInFromTop;
+    /* see animation section */
+    animation-duration: 1.2s; }
+  .heading-secondary--sub {
+    display: grid;
+    /* check above definition from 'primary-main' */
+    font-weight: 400;
+    font-size: 8rem;
+    letter-spacing: 3.5rem;
+    animation-name: moveInFromBottom;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.6);
+    /* slow show animation*/ }
+
 .btn--white {
   /* background-color: #ed213a; */
   color: #f0f8ff;
