@@ -1,6 +1,7 @@
 .section-about {
   background-color: $color-primary-white;
-  padding: 50rem 25rem;
+  padding: 30rem 10rem;
   border-right: 60vh solid $color-primary-red;
   display: flex;
+  flex-direction: row;
 }

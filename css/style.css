@@ -235,11 +235,15 @@ body {
     animation-delay: 16s;
     background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/burgerComboWithDrink.jpg); }
 
+.heading-secondary--burger {
+  height: 60rem; }
+
 .section-about {
   background-color: #f0f8ff;
-  padding: 50rem 25rem;
+  padding: 30rem 10rem;
   border-right: 60vh solid #ed213a;
-  display: flex; }
+  display: flex;
+  flex-direction: row; }
 
 /* colors
 ----Gradient----
