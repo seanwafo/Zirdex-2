@@ -1,7 +1,32 @@
-.section-about {
+.header-secondary {
   background-color: $color-primary-white;
-  padding: 30rem 10rem;
-  border-right: 60vh solid $color-primary-red;
+  padding: 10rem 20rem;
+  // border-right: 45vh solid $color-primary-red;
   display: flex;
   flex-direction: row;
 }
+
+.heading-secondary {
+  flex-direction: column;
+  display: flex;
+}
+
+.heading-secondary--burger {
+  height: 40rem;
+  position: relative;
+  display: inline-block;
+  // justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.red-stripe {
+  background-color: $color-primary-red;
+  position: relative;
+  display: flex;
+  height: 100rem;
+  width: 40rem;
+  justify-content: right;
+}
+// .heading-secondary {
+
+// }

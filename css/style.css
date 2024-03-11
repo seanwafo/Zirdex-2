@@ -235,15 +235,29 @@ body {
     animation-delay: 16s;
     background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/burgerComboWithDrink.jpg); }
 
-.heading-secondary--burger {
-  height: 60rem; }
-
-.section-about {
+.header-secondary {
   background-color: #f0f8ff;
-  padding: 30rem 10rem;
-  border-right: 60vh solid #ed213a;
+  padding: 10rem 20rem;
   display: flex;
   flex-direction: row; }
+
+.heading-secondary {
+  flex-direction: column;
+  display: flex; }
+
+.heading-secondary--burger {
+  height: 40rem;
+  position: relative;
+  display: inline-block;
+  flex-wrap: wrap; }
+
+.red-stripe {
+  background-color: #ed213a;
+  position: relative;
+  display: flex;
+  height: 100rem;
+  width: 40rem;
+  justify-content: right; }
 
 /* colors
 ----Gradient----
