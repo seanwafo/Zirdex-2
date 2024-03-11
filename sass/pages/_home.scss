@@ -2,8 +2,8 @@
   background-color: $color-primary-white;
   padding: 10rem 20rem;
   // border-right: 45vh solid $color-primary-red;
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  z-index: -1;
 }
 
 .heading-secondary {
@@ -17,6 +17,7 @@
   display: inline-block;
   // justify-content: flex-end;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .red-stripe {
@@ -25,7 +26,8 @@
   display: flex;
   height: 100rem;
   width: 40rem;
-  justify-content: right;
+  right: 0px;
+  z-index: -1;
 }
 // .heading-secondary {
 

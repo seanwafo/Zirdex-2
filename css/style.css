@@ -238,8 +238,10 @@ body {
 .header-secondary {
   background-color: #f0f8ff;
   padding: 10rem 20rem;
+  position: relative;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  z-index: -1; }
 
 .heading-secondary {
   flex-direction: column;
@@ -249,7 +251,8 @@ body {
   height: 40rem;
   position: relative;
   display: inline-block;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  z-index: 1; }
 
 .red-stripe {
   background-color: #ed213a;
@@ -257,7 +260,8 @@ body {
   display: flex;
   height: 100rem;
   width: 40rem;
-  justify-content: right; }
+  right: 0px;
+  z-index: -1; }
 
 /* colors
 ----Gradient----
