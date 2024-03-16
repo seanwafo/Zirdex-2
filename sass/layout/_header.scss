@@ -2,6 +2,7 @@
   position: absolute;
   top: 4rem;
   left: 4rem;
+  z-index: 1;
 }
 
 /* .logo {
@@ -18,12 +19,12 @@
   background-size: cover; /*whatever the width of the viewport, it will try to fit the element of the box*/
   background-position: center; /* making the top area of the burger background stayput while being minimized*/
   position: relative;
-  clip-path: polygon(
-    25% 0%,
-    100% 0%,
-    75% 100%,
-    0% 100%
-  ); /*need to fix clipping the logo */
+  // clip-path: polygon(
+  //   25% 0%,
+  //   100% 0%,
+  //   75% 100%,
+  //   0% 100%
+  // ); /*need to fix clipping the logo */
   isolation: isolate;
   width: 100vw;
   overflow: hidden;

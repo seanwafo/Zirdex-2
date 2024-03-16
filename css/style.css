@@ -94,7 +94,7 @@ body {
 .heading-secondary {
   color: #0b0b0c;
   text-transform: uppercase;
-  text-align: left;
+  text-align: right;
   font-family: 'Inter', sans-serif;
   backface-visibility: hidden; }
   .heading-secondary--main {
@@ -184,7 +184,8 @@ body {
 .logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem; }
+  left: 4rem;
+  z-index: 1; }
 
 /* .logo {
     height: 45px;
@@ -200,8 +201,6 @@ body {
   background-position: center;
   /* making the top area of the burger background stayput while being minimized*/
   position: relative;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  /*need to fix clipping the logo */
   isolation: isolate;
   width: 100vw;
   overflow: hidden;
@@ -237,31 +236,30 @@ body {
 
 .header-secondary {
   background-color: #f0f8ff;
-  padding: 10rem 20rem;
-  position: relative;
   display: flex;
-  flex-direction: row;
-  z-index: -1; }
+  z-index: -1;
+  height: 100vh;
+  overflow: hidden;
+  isolation: isolate; }
 
-.heading-secondary {
-  flex-direction: column;
-  display: flex; }
+.heading-secondary-sub {
+  display: inline-block; }
 
 .heading-secondary--burger {
   height: 40rem;
   position: relative;
   display: inline-block;
-  flex-wrap: wrap;
+  left: 32vw;
+  top: 20vh;
   z-index: 1; }
 
 .red-stripe {
   background-color: #ed213a;
   position: relative;
-  display: flex;
-  height: 100rem;
-  width: 40rem;
-  right: 0px;
-  z-index: -1; }
+  min-width: 80rem;
+  max-width: 90rem;
+  left: 400px;
+  padding: 0%; }
 
 /* colors
 ----Gradient----

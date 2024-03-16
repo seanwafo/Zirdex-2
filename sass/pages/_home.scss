@@ -1,14 +1,16 @@
 .header-secondary {
   background-color: $color-primary-white;
-  padding: 10rem 20rem;
+  // padding: 10rem 20rem;
   // border-right: 45vh solid $color-primary-red;
-  position: relative;
+  display: flex;
   z-index: -1;
+  height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.heading-secondary {
-  flex-direction: column;
-  display: flex;
+.heading-secondary-sub {
+  display: inline-block;
 }
 
 .heading-secondary--burger {
@@ -16,18 +18,20 @@
   position: relative;
   display: inline-block;
   // justify-content: flex-end;
-  flex-wrap: wrap;
+  left: 32vw;
+  top: 20vh;
   z-index: 1;
 }
 
 .red-stripe {
   background-color: $color-primary-red;
   position: relative;
-  display: flex;
-  height: 100rem;
-  width: 40rem;
-  right: 0px;
-  z-index: -1;
+  // height: 100rem;
+  min-width: 80rem;
+  max-width: 90rem;
+  left: 400px;
+  padding: 0%;
+  // z-index: -1;
 }
 // .heading-secondary {
 
