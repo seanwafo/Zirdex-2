@@ -94,13 +94,13 @@ body {
 .heading-secondary {
   color: #0b0b0c;
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
   font-family: 'Inter', sans-serif;
   backface-visibility: hidden; }
   .heading-secondary--main {
     display: grid;
-    font-weight: 800;
-    font-size: 10rem;
+    font-weight: 600;
+    font-size: 20rem;
     letter-spacing: 1rem;
     animation-name: moveInFromTop;
     /* see animation section */
@@ -245,21 +245,9 @@ body {
 .heading-secondary-sub {
   display: inline-block; }
 
-.heading-secondary--burger {
-  height: 40rem;
-  position: relative;
-  display: inline-block;
-  left: 32vw;
-  top: 20vh;
-  z-index: 1; }
-
-.red-stripe {
-  background-color: #ed213a;
-  position: relative;
-  min-width: 80rem;
-  max-width: 90rem;
-  left: 400px;
-  padding: 0%; }
+.section-about {
+  background-color: #f4fdff;
+  padding: 20rem; }
 
 /* colors
 ----Gradient----
