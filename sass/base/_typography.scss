@@ -43,20 +43,38 @@ body {
 }
 
 .heading-secondary {
-  color: $color-primary-dark;
+  color: transparent; // transparent color to make the background image gradient visible to the text 'OUR HISTORY'
   text-transform: uppercase;
   text-align: center;
+  font-size: 3.5rem;
   font-family: 'Inter', sans-serif;
   backface-visibility: hidden;
+  font-weight: 800;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-red,
+    $color-primary-dark-red
+  );
+  display: inline-block;
+  -webkit-background-clip: text; // this will clip the background image to the text 'OUR HISTORY'. the gradient will now apply to the text 'OUR HISTORY'
+  letter-spacing: 3px;
+  animation-name: moveInFromTop; /* see animation section */
+  animation-duration: 1.2s;
+  will-change: transform;
+  transition: transform 450ms;
 
-  &--main {
-    display: grid;
-    font-weight: 600;
-    font-size: 20rem;
-    letter-spacing: 1rem;
-    animation-name: moveInFromTop; /* see animation section */
-    animation-duration: 1.2s;
+  &:hover {
+    letter-spacing: 3.3px;
+    transition: transform 125ms;
+    transform: translateY(-10px);
+    color: $color-primary-red;
+    text-shadow: 0.5rem 1rem 2rem rgba($color-primary-dark, 0.2); //.5rem = 'X' direction is 5px. 1rem = 'Y' direction is 10px. 2rem = 20px off blur.
   }
+
+  // &--main {
+  //   font-weight: 600;
+  //   font-size: 20rem;
+  //   letter-spacing: 1rem; }
 
   &--sub {
     display: grid; /* check above definition from 'primary-main' */
