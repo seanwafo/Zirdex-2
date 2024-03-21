@@ -92,3 +92,19 @@ body {
     ); /* slow show animation*/
   }
 }
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  // all paragraph will have a margin-bottom of 3rem EXCEPT for the last paragraph.
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

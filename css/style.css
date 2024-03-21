@@ -125,8 +125,22 @@ body {
     animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.6);
     /* slow show animation*/ }
 
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 500; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem; }
 
 .btn--white {
   /* background-color: #ed213a; */
@@ -167,7 +181,6 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  background-color: #11c95e;
   font-size: 2rem; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -176,7 +189,6 @@ body {
     display: table;
     clear: both; }
   .row [class^='col-'] {
-    background-color: aquamarine;
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }

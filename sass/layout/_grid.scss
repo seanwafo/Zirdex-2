@@ -1,7 +1,6 @@
 .row {
   max-width: $grid-width; //we set 114rem(1140px is the usual monitor width) as the default and if it's less than 114rem, then browser will occupy 100% of the width
   margin: 0 auto;
-  background-color: #11c95e;
   font-size: 2rem;
 
   &:not(:last-child) {
@@ -14,7 +13,6 @@
   // attribute due to col- repeated below that needs to be DRY
   // class^= is selecting the class that STARTS with "col-"
   [class^='col-'] {
-    background-color: aquamarine;
     float: left; // we always float these column to the left. they are now on the same row
 
     &:not(:last-child) {
