@@ -154,9 +154,9 @@ body {
   border-style: solid;
   border-color: #ed213a;
   border-width: 0.4rem;
-  border-radius: 4rem;
+  border-radius: 3rem;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: 0.5rem;
   transition: all 0.3s ease-in-out; }
 
@@ -186,34 +186,42 @@ body {
 
 .btn-text {
   outline: 0;
-  grid-gap: 8px;
+  grid-gap: 0.8rem;
   align-items: center;
+  letter-spacing: 0.4rem;
   background-color: #ed213a;
   color: #0b0b0c;
-  border: 1px solid #0b0b0c;
-  border-radius: 4px;
-  cursor: pointer;
+  border: 0.1rem solid #0b0b0c;
+  border-radius: 2rem;
   display: inline-flex;
   flex-shrink: 0;
-  font-size: 16px;
-  gap: 8px;
+  font-size: 1.8rem;
+  gap: 0.8rem;
   justify-content: center;
   line-height: 1.5;
   overflow: hidden;
-  padding: 12px 16px;
+  padding: 1.2rem 1.6rem;
   text-decoration: none;
   text-overflow: ellipsis;
   transition: all 0.14s ease-out;
   white-space: nowrap; }
   .btn-text:hover {
-    box-shadow: 4px 4px 0 #0b0b0c;
-    transform: translate(-4px, -4px);
+    box-shadow: 0.4rem 0.4rem 0 #0b0b0c;
+    transform: translate(-0.4rem, -0.4rem);
     color: #f0f8ff; }
   .btn-text:focus-visible {
-    outline-offset: 1px; }
+    outline-offset: 0.1rem; }
   .btn-text:active {
     transform: translateY(-0.1rem);
-    box-shadow: -4px -4px 0; }
+    box-shadow: -0.4rem -0.4rem 0; }
+  .btn-text:link, .btn-text:visited {
+    text-transform: uppercase;
+    text-decoration-line: none;
+    padding: 1.5rem 4.2rem;
+    /* button size padding*/
+    display: inline-block;
+    /* so that it'll have its own space*/
+    transition: all 0.2s; }
 
 .row {
   max-width: 114rem;
