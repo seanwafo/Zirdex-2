@@ -39,3 +39,41 @@
     animation-fill-mode: backwards;
   }
 }
+
+.btn-text {
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background-color: $color-primary-red;
+  color: $color-primary-dark;
+  border: 1px solid $color-primary-dark;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
+
+  &:hover {
+    box-shadow: 4px 4px 0 $color-primary-dark;
+    transform: translate(-4px, -4px);
+    color: $color-primary-white;
+  }
+
+  &:focus-visible {
+    outline-offset: 1px;
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: -4px -4px 0;
+  }
+}

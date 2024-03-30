@@ -3,7 +3,17 @@
   text-align: center;
 }
 
+// Utility for margin bottom of 2rem. mostly for h3 headers
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+// Utility for margin bottom of 4rem.
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
 // Utility for margin bottom of 8rem. mostly for h2 headers
-.u-margin-bottom-8 {
+.u-margin-bottom-big {
   margin-bottom: 8rem;
 }
