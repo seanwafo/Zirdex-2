@@ -1,0 +1,14 @@
+.composition {
+  position: relative; //assigned a position to relative so this will serve as the parent positionn of __photo below
+  &__photo {
+    width: 55%;
+    border-radius: 50%;
+    box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.4);
+    position: absolute; //parent is the composition
+
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+  }
+}
