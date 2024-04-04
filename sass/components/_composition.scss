@@ -6,6 +6,8 @@
     border-radius: 50%;
     box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, 0.4);
     position: absolute; //parent is the composition
+    transition: all 0.2s;
+    z-index: 10; //default z-index for all photos should be smaller than the hover
 
     &--p1 {
       left: 0;
@@ -22,6 +24,8 @@
 
     &:hover {
       transform: scale(1.04);
+      box-shadow: 0 2.2rem 4rem rgba($color-primary-dark, 0.5);
+      z-index: 20;
     }
   }
 }

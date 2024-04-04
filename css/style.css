@@ -229,7 +229,9 @@ body {
     width: 55%;
     border-radius: 50%;
     box-shadow: 0 1.5rem 4rem rgba(11, 11, 12, 0.4);
-    position: absolute; }
+    position: absolute;
+    transition: all 0.2s;
+    z-index: 10; }
     .composition__photo--p1 {
       left: 0;
       top: -7rem; }
@@ -240,7 +242,9 @@ body {
       left: 11%;
       top: 14rem; }
     .composition__photo:hover {
-      transform: scale(1.04); }
+      transform: scale(1.04);
+      box-shadow: 0 2rem 4rem rgba(11, 11, 12, 0.5);
+      z-index: 20; }
 
 .row {
   max-width: 114rem;
