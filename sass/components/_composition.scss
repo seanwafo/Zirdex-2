@@ -1,6 +1,8 @@
 .composition {
   position: relative; //assigned a position to relative so this will serve as the parent positionn of __photo below
-
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.98);
+  }
   &__photo {
     width: 55%; //percentage are used for down scaling or responsive design
     border-radius: 50%;
@@ -8,6 +10,7 @@
     position: absolute; //parent is the composition
     transition: all 0.2s;
     z-index: 10; //default z-index for all photos should be smaller than the hover
+    outline-offset: 1.3rem; // outline offset will activate on which element has the 'outline' property. (e.g. :hover state.)
 
     &--p1 {
       left: 0;
@@ -23,9 +26,10 @@
     }
 
     &:hover {
-      transform: scale(1.04);
+      transform: scale(1.04) translateY(-0.5rem);
       box-shadow: 0 2.2rem 4rem rgba($color-primary-dark, 0.5);
       z-index: 20;
+      outline: 1.2rem solid $color-primary-red;
     }
   }
 }
