@@ -108,3 +108,13 @@ body {
     margin-bottom: 3rem;
   }
 }
+
+// GOOGLE ICON FONT
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+
+  &--burger-icon {
+    font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+  }
+}

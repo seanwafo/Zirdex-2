@@ -136,6 +136,11 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .material-symbols-outlined--burger-icon {
+    font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24; }
+
 .u-center-text {
   text-align: center; }
 
@@ -291,7 +296,7 @@ body {
   height: 100vh;
   height: 100svh;
   /* 95% viewport height */
-  background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/burgerMeal2small2.jpg);
+  background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/headerBurger.jpg);
   background-size: cover;
   /*whatever the width of the viewport, it will try to fit the element of the box*/
   background-position: center;
@@ -322,13 +327,14 @@ body {
     scale: 1.2;
     z-index: -1; }
   .header--bg-header:nth-child(1) {
+    animation-delay: 4s;
     background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/threePatty.jpg); }
   .header--bg-header:nth-child(2) {
     animation-delay: 8s;
-    background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/chickenBurger.jpg); }
+    background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/headerBurger2.jpg); }
   .header--bg-header:nth-child(3) {
     animation-delay: 16s;
-    background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/burgerComboWithDrink.jpg); }
+    background-image: linear-gradient(to right bottom, #351a17da, #680c160e), url(../img/pattyMeal.jpg); }
 
 .header-secondary {
   background-color: #f0f8ff;

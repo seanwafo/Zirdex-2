@@ -15,7 +15,7 @@
   height: 100vh;
   height: 100svh; /* 95% viewport height */
   background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-    url(../img/burgerMeal2small2.jpg);
+    url(../img/headerBurger.jpg);
   background-size: cover; /*whatever the width of the viewport, it will try to fit the element of the box*/
   background-position: center; /* making the top area of the burger background stayput while being minimized*/
   position: relative;
@@ -55,17 +55,18 @@
   }
 
   &--bg-header:nth-child(1) {
+    animation-delay: 4s;
     background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
       url(../img/threePatty.jpg);
   }
   &--bg-header:nth-child(2) {
     animation-delay: 8s;
     background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-      url(../img/chickenBurger.jpg);
+      url(../img/headerBurger2.jpg);
   }
   &--bg-header:nth-child(3) {
     animation-delay: 16s;
     background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
-      url(../img/burgerComboWithDrink.jpg);
+      url(../img/pattyMeal.jpg);
   }
 }
