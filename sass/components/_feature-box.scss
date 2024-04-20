@@ -1,5 +1,23 @@
 .feature-box {
+  background-color: rgba($color-primary-white, 0.8); //0.8 = 80% color opacity
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 4rem rgba($color-primary-dark, 0.4);
+
   &__icon {
+    font-size: 8rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    color: transparent;
+    backface-visibility: hidden;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-red,
+      $color-primary-dark-red
+    );
+    -webkit-background-clip: text; //burger icon is a text and not an image
   }
   &__text {
   }

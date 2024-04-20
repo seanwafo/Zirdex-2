@@ -18,6 +18,13 @@
   padding: 25rem;
 }
 
+.section-features {
+  padding: 25rem 0;
+  background-image: linear-gradient(to right bottom, $color-gradient-darkRed),
+    url(../img/onion-ring-features.png);
+  background-size: cover; /*whatever the width of the viewport, it will try to fit the element of the box*/
+  background-position: center;
+}
 // (START) part of 2nd OPTION HEADER
 // .heading-secondary--burger {
 //   height: 40rem;
