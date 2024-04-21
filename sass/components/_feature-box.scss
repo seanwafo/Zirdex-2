@@ -4,7 +4,8 @@
   padding: 2.5rem;
   text-align: center;
   border-radius: 2rem;
-  box-shadow: 0 2rem 4rem rgba($color-primary-dark, 0.4);
+  box-shadow: 0 1.7rem 4rem rgba($color-primary-dark, 0.4);
+  transition: all 0.3s;
 
   &__icon {
     font-size: 8rem;
@@ -19,6 +20,9 @@
     );
     -webkit-background-clip: text; //burger icon is a text and not an image
   }
-  &__text {
+
+  &:hover {
+    transform: translateY(-0.6rem) scale(1.03);
+    box-shadow: 0 1rem 2rem $color-primary-dark;
   }
 }
