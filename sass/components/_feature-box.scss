@@ -1,5 +1,5 @@
 .feature-box {
-  background-color: rgba($color-primary-white, 0.8); //0.8 = 80% color opacity
+  background-color: rgba($color-primary-white, 0.7); //0.7 = 70% color opacity
   font-size: 1.5rem;
   padding: 2.5rem;
   text-align: center;
@@ -24,5 +24,6 @@
   &:hover {
     transform: translateY(-0.6rem) scale(1.03);
     box-shadow: 0 1rem 2rem $color-primary-dark;
+    background-color: rgba($color-primary-white, 0.8);
   }
 }
