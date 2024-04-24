@@ -377,6 +377,10 @@ body {
   /*whatever the width of the viewport, it will try to fit the element of the box*/
   background-position: center; }
 
+.section-best {
+  background-color: #f4fdff;
+  padding: 25rem; }
+
 /* colors
 ----Gradient----
 pure lust: 
