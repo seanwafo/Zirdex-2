@@ -368,7 +368,8 @@ body {
 
 .section-about {
   background-color: #f4fdff;
-  padding: 10rem 25rem 18rem; }
+  margin-top: -10rem;
+  padding: 25rem; }
 
 .section-features {
   padding: 25rem 0;
@@ -379,7 +380,8 @@ body {
 
 .section-best {
   background-color: #f4fdff;
-  padding: 25rem; }
+  padding: 20rem 0 50rem 0;
+  margin-top: -10rem; }
 
 /* colors
 ----Gradient----
