@@ -275,10 +275,13 @@ body {
     background-color: rgba(240, 248, 255, 0.8); }
 
 .card {
-  background-color: orangered;
-  height: 50rem;
-  transition: all 0.8s; }
-  .card:hover {
+  -moz-perspective: 150rem;
+  perspective: 150rem; }
+  .card__side {
+    background-color: orangered;
+    height: 50rem;
+    transition: all 0.8s; }
+  .card:hover .card__side {
     transform: rotateY(180deg); }
 
 .row {
