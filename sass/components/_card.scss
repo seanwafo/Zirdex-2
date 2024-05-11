@@ -2,15 +2,34 @@
   //perspective will make the card flip more realistic
   -moz-perspective: 150rem;
   perspective: 150rem; //must set in parent element. the &:hover is the child element.
+  position: relative;
 
   &__side {
-    background-color: orangered;
+    font-size: 2rem;
+    color: #fff;
     height: 50rem;
     transition: all 0.8s;
+    position: absolute; //must set to absolute so the 2 faces should be on top of each other. ".card" is the parent and that is why its position is relative
+    top: 0;
+    left: 0;
+    width: 100%; //so card size wont depend on text width.
+
+    &--front {
+      background-color: orangered;
+    }
+    //the back face should be facing 180deg from the start as states
+    &--back {
+      background-color: blueviolet;
+      transform: rotateY(180deg);
+    }
   }
 
-  //this will rotate the card on the Y axis
-  &:hover &__side {
+  //this will revolve the card on the Y axis
+  &:hover &__side--front {
     transform: rotateY(180deg);
+  }
+  //from 180deg, back face will revolve to 0deg once hovered
+  &:hover &__side--back {
+    transform: rotateY(0deg);
   }
 }

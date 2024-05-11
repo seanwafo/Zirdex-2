@@ -276,13 +276,26 @@ body {
 
 .card {
   -moz-perspective: 150rem;
-  perspective: 150rem; }
+  perspective: 150rem;
+  position: relative; }
   .card__side {
-    background-color: orangered;
+    font-size: 2rem;
+    color: #fff;
     height: 50rem;
-    transition: all 0.8s; }
-  .card:hover .card__side {
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .card__side--front {
+      background-color: orangered; }
+    .card__side--back {
+      background-color: blueviolet;
+      transform: rotateY(180deg); }
+  .card:hover .card__side--front {
     transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
 
 .row {
   max-width: 114rem;
