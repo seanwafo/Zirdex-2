@@ -277,7 +277,8 @@ body {
 .card {
   -moz-perspective: 150rem;
   perspective: 150rem;
-  position: relative; }
+  position: relative;
+  height: 50rem; }
   .card__side {
     font-size: 2rem;
     color: #fff;
@@ -286,7 +287,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; }
+    width: 100%;
+    backface-visibility: hidden; }
     .card__side--front {
       background-color: orangered; }
     .card__side--back {

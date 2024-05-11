@@ -3,16 +3,18 @@
   -moz-perspective: 150rem;
   perspective: 150rem; //must set in parent element. the &:hover is the child element.
   position: relative;
+  height: 50rem; //must be the same with "&__side" inorder to maintain the perspective view effect. fixes the float issue due to the absolute position on the child &__side
 
   &__side {
     font-size: 2rem;
     color: #fff;
-    height: 50rem;
+    height: 50rem; //must be the same with ".card" inorder to maintain the perspective view effect
     transition: all 0.8s;
     position: absolute; //must set to absolute so the 2 faces should be on top of each other. ".card" is the parent and that is why its position is relative
     top: 0;
     left: 0;
     width: 100%; //so card size wont depend on text width.
+    backface-visibility: hidden; //hides the backside of the element when revolving. the front will be the only thing shown and animation is better
 
     &--front {
       background-color: orangered;
