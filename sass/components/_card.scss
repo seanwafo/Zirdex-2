@@ -9,7 +9,7 @@
     font-size: 2rem;
     color: #fff;
     height: 50rem; //must be the same with ".card" inorder to maintain the perspective view effect
-    transition: all 0.8s;
+    transition: all 0.8s ease;
     position: absolute; //must set to absolute so the 2 faces should be on top of each other. ".card" is the parent and that is why its position is relative
     top: 0;
     left: 0;
@@ -17,7 +17,7 @@
     backface-visibility: hidden; //hides the backside of the element when revolving. the front will be the only thing shown and animation is better
 
     &--front {
-      background-color: orangered;
+      background-color: $color-primary-white;
     }
     //the back face should be facing 180deg from the start as states
     &--back {
