@@ -2,7 +2,7 @@
   //perspective will make the card flip more realistic
   -moz-perspective: 150rem;
   perspective: 150rem; //must set in parent element. the &:hover is the child element.
-  position: relative;
+  position: relative; //.card is the parent. position relative due to absolute position at &__side
   height: 50rem; //must be the same with "&__side" inorder to maintain the perspective view effect. fixes the float issue due to the absolute position on the child &__side
 
   &__side {
