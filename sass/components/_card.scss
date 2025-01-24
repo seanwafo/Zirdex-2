@@ -1,4 +1,5 @@
 .card {
+  // FUNCTIONALITY
   //perspective will make the card flip more realistic
   -moz-perspective: 150rem;
   perspective: 150rem; //must set in parent element. the &:hover is the child element.
@@ -15,23 +16,38 @@
     left: 0;
     width: 100%; //so card size wont depend on text width.
     backface-visibility: hidden; //hides the backside of the element when revolving. the front will be the only thing shown and animation is better
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 3rem rgba($color-primary-dark, 0.18);
 
     &--front {
       background-color: $color-primary-white;
     }
     //the back face should be facing 180deg from the start as states
     &--back {
-      background-color: blueviolet;
       transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
     }
   }
 
-  //this will revolve the card on the Y axis
+  //this will revolve the card on the Y axis. needs to be negative value so it will show as a complete flip
   &:hover &__side--front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   //from 180deg, back face will revolve to 0deg once hovered
   &:hover &__side--back {
     transform: rotateY(0deg);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    &--1 {
+      background-image: url();
+    }
   }
 }
